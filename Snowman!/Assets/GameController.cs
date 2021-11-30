@@ -7,6 +7,8 @@ public class GameController : MonoBehaviour
 {
 
     public UnityEngine.UI.Text Message;
+    public UnityEngine.UI.Text GetGuessedLetter;
+    public UnityEngine.UI.Text GetWord;
     public UnityEngine.UI.Button StartButton;
     public GameObject StartScreen;
     public GameObject PlayScreen;
@@ -38,8 +40,10 @@ public class GameController : MonoBehaviour
 
     public void SubmitGuess()
     {
-       Debug.Log(this.PlayerGuess.CheckGuess()); 
-       PlayerGuess.text = string.Empty;
+        string guess = PlayerGuess.text;
+        PlayerGuess.text = string.Empty;
+        Debug.Log(guess);
+        GetWord.text = this.guessingGame.GetWord();
     }
 }
 
