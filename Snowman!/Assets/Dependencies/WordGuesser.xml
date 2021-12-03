@@ -180,6 +180,14 @@
             A class for generating random words.
             </summary>
         </member>
+        <member name="M:WordGuesser.WordSelector.LoadFromString(System.String)">
+            <summary>
+            Given a string, splits it on white space and uses the resulting
+            words as a dictionary.
+            </summary>
+            <param name="toLoad">The string of words to use.</param>
+            <returns>A WordSelector with the specified dictionary.</returns>
+        </member>
         <member name="M:WordGuesser.WordSelector.#ctor(System.String)">
             <summary>
             Initializes an instance of the WordSelector class specifying the path to a
